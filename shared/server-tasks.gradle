@@ -1,0 +1,8 @@
+task 'startServer' {
+    group 'Demo'
+    description "Starts a server on port ${port}"
+
+    doLast {
+        println "Started server on port ${port}"
+    }
+}

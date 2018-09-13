@@ -1,17 +1,10 @@
+apply from: "${rootProject.projectDir}/shared/server-tasks.gradle"
+
 task 'build' {
     group 'Demo'
     description "Builds ${project.name}"
 
     doLast {
         println "[${target}] Built ${project.name}"
-    }
-}
-
-task 'startServer' {
-    group 'Demo'
-    description 'Starts a server on port 8080'
-
-    doLast {
-        println "Started server on port 8080"
     }
 }
