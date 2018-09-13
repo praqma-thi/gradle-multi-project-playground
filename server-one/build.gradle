@@ -1,7 +1,9 @@
-task 'info' << {
-    println """\
-        Hello, I am the ${project.name} info task.
-        You called me with gradle version ${gradle.gradleVersion}.
-        I am using a deprecated task notation.
-        """.stripIndent()
+task 'info' {
+    doLast {
+        println """\
+            Hello, I am the ${project.name} info task.
+            You called me with gradle version ${gradle.gradleVersion}.
+            I am NO LONGER using a deprecated task notation.
+            """.stripIndent()
+    }
 }
