@@ -1,17 +1,9 @@
-task 'build' {
-    group 'Demo'
-    description "Builds ${project.name}"
-
+task 'info' {
     doLast {
-        println "[${target}] Built ${project.name}"
-    }
-}
-
-task 'startServer' {
-    group 'Demo'
-    description 'Starts a server on port 9090'
-
-    doLast {
-        println "Started server on port 9090"
+        println """\
+            Hello, I am the ${project.name} info task.
+            You called me with gradle version ${gradle.gradleVersion}.
+            I am NOT using a deprecated task notation.
+            """.stripIndent()
     }
 }
