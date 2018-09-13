@@ -1,6 +1,8 @@
 // build target, set with 'gradlew -Ptarget=<target>'
 ext.target = project.findProperty('target') ?: 'DEBUG'
 
+apply from: 'task-types.gradle'
+
 // Configure an 'info' task for all projects
 allprojects {
     task 'info' {

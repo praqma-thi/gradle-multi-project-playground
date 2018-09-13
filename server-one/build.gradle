@@ -7,11 +7,9 @@ task 'build' {
     }
 }
 
-task 'startServer' {
+task 'startServer' (type: StartServer) {
     group 'Demo'
     description 'Starts a server on port 8080'
 
-    doLast {
-        println "Started server on port 8080"
-    }
+    port = 8080
 }

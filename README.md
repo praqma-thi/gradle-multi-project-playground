@@ -21,5 +21,4 @@ In case you set the `target` property to `RELEASE` (by calling Gradle with `-Pta
 The subprojects each have a `startServer` task.
 This starts a server on a specific port.
 
-This code is currently duplicated, and can be cleaned up.
-
+The code duplication was solved by creating a `StartServer` task type, which the `root` project exposes, and which the subprojects create and configure.
